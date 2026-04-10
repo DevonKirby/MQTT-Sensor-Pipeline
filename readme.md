@@ -2,6 +2,8 @@
 
 A simulated industrial sensor monitoring system built across three components.
 
+![Pipeline diagram](mqtt_pipeline_diagram.svg)
+
 A **C++ simulator** generates fake sensor readings (temperature, pressure, vibration, humidity) for three machines and publishes them over MQTT every two seconds. About 5% of readings are intentionally anomalous to mimic real-world faults.
 
 A **Python ingestion service** subscribes to those MQTT messages and writes each reading into a SQL Server database as it arrives.
